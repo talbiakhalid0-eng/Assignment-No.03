@@ -251,6 +251,7 @@ body {
     display: flex;
     justify-content: center;
     padding-right: 10px; 
+    margin: 0 auto;
 }
 
 .certo-main-img {
@@ -261,11 +262,9 @@ body {
     object-position: center;
     
     display: block;
-    border-radius: 12px;
+    border-radius: 20px;
     position: relative;
-    z-index: 2;
-    margin-top: -7.02px;
-    margin-left: -7.02px; 
+    z-index: 2; 
 }
 
 .certo-accent-box {
@@ -273,10 +272,10 @@ body {
     width: 482.03px;
     height: 482.03px;
     background-color: var(--certo-yellow);
-    border-radius: 12px;
+    border-radius: 20px;
     z-index: 1;
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 25px;
 }
 
 /* RESPONSIVE STACKING */
@@ -286,5 +285,121 @@ body {
         max-width: 350px;
         height: auto;
         aspect-ratio: 1 / 1;
+    }
+}
+
+.certo-features-section {
+    background-color: #f4f7ff; /* Light blue background from image_a476e1.jpg */
+    padding: 80px 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certo-features-section .content-wrapper {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.certo-features-section .section-header {
+    text-align: center;
+    color: #020b27;
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.certo-features-section .features-card {
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 70px 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.certo-features-section .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 40px;
+    margin-bottom: 60px;
+}
+
+.certo-features-section .feature-item {
+    text-align: center;
+}
+
+.certo-features-section .feature-icon {
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certo-features-section .feature-icon img {
+    height: 100%;
+}
+
+.certo-features-section .feature-item h3 {
+    color: #020b27;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.certo-features-section .feature-item p {
+    color: #4a5568;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Button Group */
+.certo-features-section .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certo-features-section .btn {
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.certo-features-section .btn-yellow {
+    background-color: #ffc247;
+    color: #020b27;
+}
+
+.certo-features-section .btn-yellow:hover {
+    background-color: #fbb62c;
+}
+
+.certo-features-section .btn-outline {
+    background-color: transparent;
+    color: #020b27;
+    border: 2px solid #020b27;
+}
+
+.certo-features-section .btn-outline:hover {
+    background-color: #020b27;
+    color: #fff;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 850px) {
+    .certo-features-section .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certo-features-section .action-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }
