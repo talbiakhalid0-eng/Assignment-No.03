@@ -332,7 +332,7 @@ body {
 }
 
 .certo-features-section .feature-icon {
-    height: auto;
+    height: 60px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
