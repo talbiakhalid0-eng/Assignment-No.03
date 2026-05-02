@@ -860,11 +860,19 @@ body {
 }
 
 /* Newsletter Card */
-.footer-newsletter-card {
+.footer-newsletter-card.newsletter-with-bg {
     background-color: #ffc850;
-    color: #020631;
-    padding: 45px 35px;
+    /* This adds the 'C' logo watermark effect */
+    background-image: url('image_974c3d.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%; /* Adjust this to match the zoom of the logo */
+    
+    padding: 50px 40px;
     border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Left aligned text as per image */
 }
 
 .footer-newsletter-card h3 {
