@@ -795,17 +795,18 @@ body {
     margin-bottom: 40px;
 }
 
+.footer-social-icons img {
+    width: 24px; /* Adjust size to fit inside the white box */
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Ensure the white box centers the image */
 .footer-social-icons a {
-    background: #ffffff;
-    color: #020631;
-    width: 44px;
-    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 22px;
+    overflow: hidden;
 }
 
 .footer-legal-links a {
