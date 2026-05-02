@@ -424,3 +424,107 @@ body {
         max-width: 300px;
     }
 }
+
+/* Container to isolate the section */
+.info-section-container {
+    width: 100%;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.info-card-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    align-items: stretch;
+    flex-wrap: wrap; /* Responsive: stacks on mobile */
+}
+
+/* Common Card Styles */
+.info-card {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Primary Card (Orange Gradient) */
+.info-card-primary {
+    background: linear-gradient(135deg, #ffcc5c 0%, #ff9a3d 100%);
+    color: #020637;
+}
+
+/* Secondary Card (White/Plain) */
+.info-card-secondary {
+    background: transparent;
+    color: #020637;
+}
+
+/* Typography */
+.info-card-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.info-card-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    max-width: 280px;
+}
+
+/* Button Styles */
+.info-card-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    font-size: 15px;
+}
+
+/* Solid Purple Button */
+.btn-solid {
+    background-color: #4433ff;
+    color: #ffffff;
+}
+
+.btn-solid:hover {
+    background-color: #3322cc;
+    transform: translateY(-2px);
+}
+
+/* Outline Button */
+.btn-outline {
+    background-color: transparent;
+    border: 1.5px solid #020637;
+    color: #020637;
+}
+
+.btn-outline:hover {
+    background-color: #020637;
+    color: #ffffff;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .info-card-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .info-card {
+        padding: 30px;
+    }
+}
