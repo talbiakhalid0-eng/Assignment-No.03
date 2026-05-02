@@ -922,6 +922,9 @@ body {
     transition: background 0.2s ease;
 }
 
+.footer-subscribe-form button:hover {
+    background: #0a1133;}
+
 .footer-placeholder-box {
     background: #ffffff;
     height: 120px;
