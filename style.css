@@ -528,3 +528,107 @@ body {
         padding: 30px;
     }
 }
+
+/* Unique container to prevent CSS leakage */
+.certo-hero-section {
+    width: 100%;
+    min-height: 400px;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Gradient matching the reference image */
+    background: linear-gradient(135deg, #3d23e0 0%, #3021b3 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Reset for nested elements to ensure local consistency */
+.certo-hero-section * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.certo-hero-section .hero-content {
+    max-width: 800px;
+}
+
+.certo-hero-section .hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.certo-hero-section .hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.certo-hero-section .hero-button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Base Button Styles */
+.certo-hero-section .hero-btn {
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Yellow Button */
+.certo-hero-section .btn-primary {
+    background-color: #ffc247;
+    color: #020637;
+}
+
+.certo-hero-section .btn-primary:hover {
+    background-color: #ffb31a;
+    transform: translateY(-2px);
+}
+
+.certo-hero-section .arrow {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+/* Outlined Button */
+.certo-hero-section .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.certo-hero-section .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .certo-hero-section .hero-title {
+        font-size: 32px;
+    }
+    .certo-hero-section .hero-button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    .certo-hero-section .hero-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
