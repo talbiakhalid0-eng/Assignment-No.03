@@ -884,8 +884,11 @@ body {
 }
 
 .footer-newsletter-card p {
-    font-size: 15px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #020631;
+    margin-bottom: 30px;
+    max-width: 90%;
 }
 
 .footer-subscribe-form {
