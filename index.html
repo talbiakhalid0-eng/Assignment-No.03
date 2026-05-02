@@ -290,29 +290,40 @@
   </div>
 </section>
 
+<!-- Fully scoped section to prevent style leakage -->
 <section class="certo-footer-section">
     <div class="footer-inner-container">
         
         <div class="footer-main-grid">
-            <!-- Left Column: Branding & Socials -->
+            <!-- Column 1: Branding & Socials -->
             <div class="footer-column branding-area">
                 <h2 class="footer-slogan">Scan. Detect. Remove.</h2>
+                
                 <div class="footer-social-icons">
-    <a href="#"><img src="Assests/Images/twitter.png" alt="Twitter"></a>
-    <a href="#"><img src="Assests/Images/facebook.png" alt="Facebook"></a>
-    <a href="#"><img src="Assests/Images/youtube.png" alt="YouTube"></a>
-</div>
+                    <!-- Replace these src paths with your actual Figma export filenames -->
+                    <a href="#" class="icon-box">
+                        <img src="twitter-icon.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="icon-box">
+                        <img src="facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="icon-box">
+                        <img src="youtube-icon.svg" alt="YouTube">
+                    </a>
+                </div>
+
                 <div class="footer-legal-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                 </div>
+                
                 <div class="footer-copyright-info">
                     <p>Copyright © 2022 Certo Software Limited | Registered in England & Wales No. 10072356</p>
                     <p>Designed & developed by <a href="#">Bigger Picture</a></p>
                 </div>
             </div>
 
-            <!-- Middle Column: Navigation -->
+            <!-- Column 2: Navigation (Certo) -->
             <div class="footer-column navigation-area">
                 <h2 class="footer-brand-name">Certo</h2>
                 <hr class="footer-hr">
@@ -325,22 +336,23 @@
                 </ul>
             </div>
 
-            <!-- Right Column: Newsletter & Empty Box -->
-            <div class="footer-newsletter-card newsletter-with-bg">
-    <h3>Sign up to our newsletter</h3>
-    <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
-    <form class="footer-subscribe-form">
-        <input type="email" placeholder="Email address" required>
-        <button type="submit">Submit</button>
-    </form>
-</div>
-                <!-- This matches the white box in the reference image -->
-                <div class="footer-placeholder-box"></div>
+            <!-- Column 3: Newsletter Card -->
+            <div class="footer-column newsletter-area">
+                <div class="footer-newsletter-card">
+                    <h3>Sign up to our newsletter</h3>
+                    <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
+                    <form class="footer-subscribe-form">
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <!-- The white placeholder box below the newsletter -->
+                <div class="footer-white-box"></div>
             </div>
         </div>
 
         <!-- Bottom Disclaimer -->
-        <div class="footer-legal-disclaimer">
+        <div class="footer-bottom-disclaimer">
             <p>Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC.</p>
         </div>
     </div>
