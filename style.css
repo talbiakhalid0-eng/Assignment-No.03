@@ -350,7 +350,7 @@ body {
 
 .certo-features-section .feature-icon img {
     width: 100%;
-    max-width: 280px; /* Adjust this to match the visual weight of image_a39262.png */
+    max-width: 200px; /* Adjust this to match the visual weight of image_a39262.png */
     height: auto;
     display: block;
 }
