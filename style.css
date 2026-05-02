@@ -914,10 +914,12 @@ body {
     background: #020631;
     color: #ffffff;
     border: none;
-    padding: 12px 28px;
-    border-radius: 50px;
+    padding: 0 40px;
+    border-radius: 0 50px 50px 0; /* Squared on left, round on right */
     font-weight: 700;
+    font-size: 18px;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 .footer-placeholder-box {
