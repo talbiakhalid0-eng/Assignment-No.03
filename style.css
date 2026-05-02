@@ -876,9 +876,11 @@ body {
 }
 
 .footer-newsletter-card h3 {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 800;
-    margin-bottom: 15px;
+    color: #020631;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
 
 .footer-newsletter-card p {
