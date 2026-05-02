@@ -288,14 +288,24 @@ body {
     }
 }
 
+/* 
+   The following styles are scoped specifically to the features section 
+   to avoid disturbing your previous CSS.
+*/
+
 .certo-features-section {
-    background-color: #f4f7ff; /* Light blue background from image_a476e1.jpg */
-    padding: 80px 20px;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f3f7ff;
+    padding: 60px 20px 100px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    /* Ensuring this doesn't inherit unwanted flex properties from parents */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.certo-features-section * {
+    box-sizing: border-box;
 }
 
 .certo-features-section .content-wrapper {
@@ -305,58 +315,47 @@ body {
 
 .certo-features-section .section-header {
     text-align: center;
-    color: #020b27;
-    font-size: 42px;
+    color: #0d1b3e;
+    font-size: 36px;
     font-weight: 900;
     margin-bottom: 50px;
-    line-height: 1.1;
-    letter-spacing: -1px;
+    line-height: 1.2;
 }
 
 .certo-features-section .features-card {
     background: #ffffff;
-    border-radius: 40px;
-    padding: 70px 50px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    border-radius: 50px; /* Matching the deep curves of image_a476e1.jpg */
+    padding: 80px 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
 }
 
 .certo-features-section .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px 40px;
+    gap: 40px 30px; /* Adjusted gap for better image alignment */
     margin-bottom: 60px;
 }
 
 .certo-features-section .feature-item {
-    text-align: center;
-}
-
-.certo-features-section .feature-icon {
-    height: 60px;
-    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.certo-features-section .feature-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .certo-features-section .feature-icon img {
-    height: 100%;
+    width: 100%;
+    max-width: 280px; /* Adjust this to match the visual weight of image_a39262.png */
+    height: auto;
+    display: block;
 }
 
-.certo-features-section .feature-item h3 {
-    color: #020b27;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.certo-features-section .feature-item p {
-    color: #4a5568;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-/* Button Group */
+/* Scoped Button Styles to avoid clashing with .btn-info or other global buttons */
 .certo-features-section .action-buttons {
     display: flex;
     justify-content: center;
@@ -364,42 +363,64 @@ body {
 }
 
 .certo-features-section .btn {
-    padding: 16px 32px;
-    border-radius: 30px;
-    font-weight: 700;
     text-decoration: none;
+    font-weight: 700;
     font-size: 16px;
-    transition: 0.3s ease;
+    height: 52px; /* Fixed height for consistent pill shape */
+    padding: 0 35px;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap;
 }
 
 .certo-features-section .btn-yellow {
     background-color: #ffc247;
-    color: #020b27;
-}
-
-.certo-features-section .btn-yellow:hover {
-    background-color: #fbb62c;
+    color: #0d1b3e;
+    border: none;
 }
 
 .certo-features-section .btn-outline {
-    background-color: transparent;
-    color: #020b27;
-    border: 2px solid #020b27;
+    background-color: #ffffff;
+    color: #0d1b3e;
+    border: 2px solid #0d1b3e;
 }
 
-.certo-features-section .btn-outline:hover {
-    background-color: #020b27;
-    color: #fff;
+.certo-features-section .btn-arrow {
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 0;
 }
 
-/* Responsive for Mobile */
-@media (max-width: 850px) {
+.certo-features-section .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments scoped to this section */
+@media (max-width: 900px) {
+    .certo-features-section .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .certo-features-section .section-header {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 650px) {
     .certo-features-section .features-grid {
         grid-template-columns: 1fr;
     }
-    
+    .certo-features-section .features-card {
+        padding: 40px 20px;
+    }
     .certo-features-section .action-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    .certo-features-section .btn {
+        width: 100%;
+        max-width: 300px;
     }
 }
