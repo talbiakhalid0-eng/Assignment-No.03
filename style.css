@@ -256,13 +256,13 @@ body {
 .logo-grid {
     display: flex;
     align-items: center;
-    gap: 40px; /* Space between each logo */
+    gap: 60px; /* Space between each logo */
 }
 
 .logo-grid img {
-    height: 30px;
+    height: 70px;
     width: auto;
-    filter: brightness(0); /* Keeps them dark like your image */
+    filter: brightness(2); /* Keeps them dark like your image */
     opacity: 0.8;
 }
 
