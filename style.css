@@ -234,7 +234,54 @@ body {
     color: #050a30;
     margin: 0;
 }
+/* Featured Bar Container */
+.featured-bar {
+    display: flex;
+    align-items: center;
+    padding: 60px 8% 20px 8%; /* Matches the header's side padding */
+    margin-top: 20px;
+}
 
+.featured-label {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #050a30;
+    margin-right: 50px;
+    white-space: nowrap; /* Keeps "Featured in:" on one line */
+}
+
+/* Logo Alignment */
+.logo-row {
+    display: flex;
+    justify-content: space-between; /* Spreads logos across the remaining width */
+    align-items: center;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.logo-row img {
+    height: 32px; /* Set a consistent height for all logos */
+    width: auto;
+    /* This filter turns any logo into the dark navy color seen in the Certo design */
+    filter: brightness(0) saturate(100%) invert(8%) sepia(35%) saturate(5437%) hue-rotate(224deg) brightness(91%) contrast(101%);
+    opacity: 0.9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .featured-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .featured-label {
+        margin-bottom: 30px;
+    }
+    .logo-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}
 
 
 /* NEW SECTION STYLES (Scoped to .certo-info-section) */
