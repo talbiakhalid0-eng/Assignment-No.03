@@ -330,15 +330,22 @@
             </div>
 
             <!-- Column 3: Newsletter Card -->
-            <div class="footer-column newsletter-area">
-                <div class="footer-newsletter-card">
-                    <h3>Sign up to our newsletter</h3>
-                    <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
-                    <form class="footer-subscribe-form">
-                        <input type="email" placeholder="Email address" required>
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
+           <div class="footer-column newsletter-area">
+    <div class="footer-newsletter-card">
+        <h3>Sign up to our newsletter</h3>
+        <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
+        
+        <form class="footer-subscribe-form" id="newsletterForm">
+            <input type="email" placeholder="Email address" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Hidden success message -->
+        <div id="success-message" style="display: none; margin-top: 20px; font-weight: bold; color: #050a30;">
+            Thanks for subscribing! Check your inbox soon.
+        </div>
+    </div>
+</div>
                 <!-- The white placeholder box below the newsletter -->
                 <div class="footer-white-box"></div>
             </div>
