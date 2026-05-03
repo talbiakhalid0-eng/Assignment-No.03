@@ -28,6 +28,26 @@
             </div>
         </div>
     </nav>
+    <!-- Inside your existing nav -->
+<a href="#signin-modal" class="btn btn-primary rounded-pill px-4 ms-3">Sign in</a>
+
+<!-- Add this Modal Structure at the very bottom of your body tag -->
+<div id="signin-modal" class="modal-overlay">
+    <div class="signin-card">
+        <!-- Close button to exit the modal -->
+        <a href="#" class="close-btn">&times;</a>
+        
+        <h2>Sign in</h2>
+        <p>Enter your email address to receive a sign-in code.</p>
+        
+        <div class="signin-form">
+            <input type="email" placeholder="Email Address*" required>
+            <div class="submit-wrapper">
+                <a href="#" class="submit-pill">Submit &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- NAVBAR END -->
 
     <main>
