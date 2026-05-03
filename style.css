@@ -16,7 +16,96 @@ body {
     background-color: var(--certo-blue);
     border: none;
 }
+/* Modal Background Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(224, 235, 245, 0.9); /* Light bluish overlay */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
 
+/* Trigger logic: Show when #signin-modal is in the URL */
+.modal-overlay:target {
+    display: flex;
+}
+
+/* The Sign-in Card */
+.signin-card {
+    background-color: #ffb83d; /* Golden yellow from image */
+    padding: 60px 50px;
+    border-radius: 60px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.signin-card h2 {
+    font-size: 2.5rem;
+    color: #050a30;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.signin-card p {
+    font-size: 1.1rem;
+    color: #050a30;
+    margin-bottom: 40px;
+}
+
+/* Input Styling */
+.signin-card input {
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Submit Button Alignment */
+.submit-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-pill {
+    background-color: #4338ca; /* Purple/Blue button */
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: opacity 0.3s;
+}
+
+/* Close Button (top right) */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #050a30;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .signin-card {
+        padding: 40px 20px;
+        border-radius: 30px;
+    }
+    .signin-card h2 { font-size: 1.8rem; }
+}
 /* HERO SECTION */
 .bg-light-blue {
     background-color: var(--light-bg);
