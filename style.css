@@ -238,19 +238,21 @@ body {
 /* This makes the end section behave like a card so it stays in line */
 .featured-end-capsule {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    min-width: 600px; /* Gives it enough width at the end of the scroll */
+    min-width: fit-content; /* Gives it enough width at the end of the scroll */
     flex: 0 0 auto !important;
-    padding-left: 50px; /* Space between the last card and the logos */
+    padding-left: 80px; 
+    padding-right: 100px; /* Space between the last card and the logos */
 }
 
 .featured-label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    flex-direction: row;
     font-weight: 900;
-    color: #050a30;
-    margin-bottom: 25px;
+    color: #02033b;
+    margin-right: 40px;
 }
 
 .logo-grid {
