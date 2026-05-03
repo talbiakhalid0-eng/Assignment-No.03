@@ -164,98 +164,81 @@ body {
     }
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif; /* Using a modern sans-serif */
+/* Section Background */
+.certo-testimonials {
+    background-color: #ffb83d; /* Signature Certo Yellow */
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #050a30;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  max-width: 500px;
-  line-height: 1.1;
-  margin-bottom: 50px;
-}
-.testimonial-section-wrapper {
-    display: flex;
-    background-color: #ffb83d; /* Yellow background from your image */
-    padding: 60px 20px;
-    gap: 40px;
-    align-items: flex-start;
+.main-heading {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
 }
 
-/* 1. Testimonial Scroll Area */
+/* Horizontal Slider Logic */
 .testimonial-slider {
-    flex: 1; /* Takes up all available space on the left */
     display: flex;
-    overflow-x: auto; /* Enables horizontal scroll */
-    gap: 20px;
-    padding-bottom: 20px;
-    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 50px;
+    scrollbar-width: none; /* Firefox */
 }
 
-/* Hide scrollbar for aesthetics */
 .testimonial-slider::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome/Safari */
 }
 
 .testimonial-card {
-    min-width: 400px;
     background: white;
+    min-width: 400px;
+    flex: 0 0 auto;
     padding: 40px;
     border-radius: 50px;
-    scroll-snap-align: start;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.testimonial-card h4 {
+.stars {
+    color: #ffb83d;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.author {
+    font-weight: 800;
+    margin-top: auto;
+}
+
+/* Bottom Logo Bar */
+.featured-text {
     font-weight: 900;
-    font-size: 1.5rem;
-    color: #050a30;
+    font-size: 1.2rem;
+    white-space: nowrap;
 }
 
-/* 2. Featured Logos Sidebar */
-.featured-logos {
-    width: 180px; /* Fixed width for the sidebar */
-    flex-shrink: 0;
+.logos img {
+    max-height: 40px;
+    width: auto;
+    filter: brightness(0); /* Makes logos solid black/dark blue to match image */
 }
 
-.featured-logos h5 {
-    font-weight: 900;
-    color: #050a30;
-    margin-bottom: 25px;
-}
-
-.logo-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
-}
-
-.logo-stack img {
-    max-width: 120px;
-    height: auto;
-    filter: brightness(0) saturate(100%) invert(8%) sepia(35%) saturate(5437%) hue-rotate(224deg) brightness(91%) contrast(101%); 
-    /* The filter above makes logos dark blue to match Certo style */
-}
-
-/* Responsive: Stack them on mobile */
-@media (max-width: 992px) {
-    .testimonial-section-wrapper {
-        flex-direction: column;
-    }
-    .featured-logos {
-        width: 100%;
-    }
-    .logo-stack {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .main-heading { font-size: 2rem; }
+    .testimonial-card { min-width: 300px; padding: 30px; }
+    .logo-bar { flex-direction: column; gap: 30px; }
+    .logos { flex-wrap: wrap; justify-content: center; gap: 20px; }
 }
 
 
