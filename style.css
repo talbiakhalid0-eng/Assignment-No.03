@@ -164,92 +164,75 @@ body {
     }
 }
 
-/* Section Background */
-.certo-testimonials {
-    background-color: #ffb83d; /* Signature Certo Yellow */
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #050a30;
+/* Container Background */
+.certo-feedback-section {
+    background-color: #ffb83d !important;
+    padding: 80px 0 !important;
+    overflow: hidden;
 }
 
-.main-heading {
+.feedback-header {
+    padding: 0 8%;
+    margin-bottom: 40px;
+    max-width: 900px;
+}
+
+.feedback-header h2 {
     font-size: 3rem;
     font-weight: 900;
+    color: #050a30;
     line-height: 1.1;
 }
 
-/* Horizontal Slider Logic */
-/* 1. The Container Fix */
-.testimonial-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 30px; /* Space between the cards */
-    padding: 60px 50px; /* Space around the slider so cards don't touch screen edges */
-    background-color: #ffb83d; /* The signature yellow */
-    scrollbar-width: none; /* Hides scrollbar in Firefox */
+/* THE SCROLL TRACK - Key fix for horizontal layout */
+.feedback-slider-track {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Forces cards into a single horizontal line */
+    overflow-x: auto !important;  /* Enables horizontal swiping/scrolling */
+    gap: 30px;
+    padding: 20px 8% 40px 8%;
+    scrollbar-width: none;        /* Hides scrollbar in Firefox */
 }
 
-.testimonial-slider::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in Chrome/Safari */
+.feedback-slider-track::-webkit-scrollbar {
+    display: none;                /* Hides scrollbar in Chrome/Safari */
 }
 
-/* 2. The Card Fix */
-.testimonial-card {
-    background: white;
-    min-width: 450px; /* Keeps cards a consistent width */
-    height: 480px; /* Keeps cards a consistent height */
-    flex: 0 0 auto; /* Essential to prevent shrinking */
+/* THE CARD - Key fix for the "stretching" issue */
+.feedback-card {
+    background: white !important;
+    /* This fixed width stops the card from stretching like in your image */
+    min-width: 380px !important; 
+    max-width: 380px !important;
+    height: 420px !important;
     
-    /* Internal Spacing */
-    padding: 50px; 
-    border-radius: 60px; /* Deep rounded corners from image_5053ce.png */
-    
-    /* Layout inside the card */
+    flex: 0 0 auto !important;    /* Prevents the card from shrinking or growing */
+    padding: 45px;
+    border-radius: 55px !important;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08); /* Soft shadow for a clean look */
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-/* 3. Text Alignment */
-.testimonial-card p {
-    font-size: 1.15rem;
+.star-rating {
+    color:#fdb235;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.feedback-text {
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
-.author {
+.feedback-author {
     font-weight: 900;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #050a30;
     margin: 0;
-}
-
-.stars {
-    color: #ffb83d;
-    font-size: 1.3rem;
-}
-
-/* Bottom Logo Bar */
-.featured-text {
-    font-weight: 900;
-    font-size: 1.2rem;
-    white-space: nowrap;
-}
-
-.logos img {
-    max-height: 40px;
-    width: auto;
-    filter: brightness(0); /* Makes logos solid black/dark blue to match image */
-}
-
-/* Responsive Fixes */
-@media (max-width: 768px) {
-    .main-heading { font-size: 2rem; }
-    .testimonial-card { min-width: 300px; padding: 30px; }
-    .logo-bar { flex-direction: column; gap: 30px; }
-    .logos { flex-wrap: wrap; justify-content: center; gap: 20px; }
 }
 
 
