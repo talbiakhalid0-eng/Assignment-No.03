@@ -870,78 +870,112 @@ body {
     flex: 1.4; /* Slightly wider than other columns */
 }
 
+/* Container Background & Padding */
 .footer-newsletter-card {
-    background-color: #ffc850;
-    /* This uses image_96d81d.png for the watermark logo effect */
-    background-image: url('image_96d81d.png'); 
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: contain;
-    
-    padding: 40px;
-    border-radius: 40px;
-    color: #020631;
-    text-align: left;
-}
-
-.footer-newsletter-card h3 {
-    font-size: 26px;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
-
-.footer-newsletter-card p {
-    font-size: 15px;
-    line-height: 1.4;
-    margin-bottom: 25px;
-}
-
-.footer-subscribe-form {
-    display: flex;
-    background: #ffffff;
-    border-radius: 50px;
-    overflow: hidden;
-    height: 52px;
-}
-
-.footer-subscribe-form input {
-    border: none;
-    padding: 0 20px;
-    flex: 1;
-    outline: none;
-    font-size: 15px;
-}
-
-.footer-subscribe-form button {
-    background: #020631;
-    color: #ffffff;
-    border: none;
-    padding: 0 30px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.footer-white-box {
-    background: #ffffff;
-    height: 120px;
-    border-radius: 20px;
-    margin-top: 30px;
-}
-
-/* Disclaimer text */
-.footer-bottom-disclaimer {
-    font-size: 11px;
-    color: #b0b3c5;
-    line-height: 1.8;
-}
-
-/* Responsive Logic */
-@media (max-width: 1024px) {
-    .footer-main-grid {
-        flex-direction: column;
+        background-color: #ffcc4d;
+        padding: 40px;
+        border-radius: 60px; /* Deep curves like image_51b013.png */
+        max-width: 550px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+        overflow: hidden;
     }
-    .footer-column {
-        width: 100%;
+
+    .footer-newsletter-card h3 {
+        color: #050a30;
+        font-size: 2.2rem;
+        margin: 0 0 10px 0;
+        font-weight: 800;
     }
-}
+
+    .footer-newsletter-card p {
+        color: #050a30;
+        margin-bottom: 30px;
+        line-height: 1.4;
+    }
+
+    /* The Pill Input Wrapper */
+    .input-container {
+        display: flex;
+        background: white;
+        border-radius: 100px;
+        padding: 6px;
+        align-items: center;
+    }
+
+    .clean-input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background: transparent;
+        color: #333;
+    }
+
+    .submit-pill {
+        background-color: #050a30;
+        color: white;
+        text-decoration: none;
+        padding: 15px 45px;
+        border-radius: 100px;
+        font-weight: bold;
+        transition: transform 0.2s;
+    }
+
+    .submit-pill:hover {
+        transform: scale(1.02);
+    }
+
+    /* The Success Message Logic */
+    .message-overlay {
+        display: none; /* Hidden initially */
+        margin-top: 25px;
+        animation: fadeIn 0.4s ease forwards;
+    }
+
+    /* When the URL ends in #success, show the message */
+    #success:target {
+        display: block;
+    }
+
+    .message-content {
+        background: rgba(5, 10, 48, 0.1);
+        border: 1px solid rgba(5, 10, 48, 0.1);
+        padding: 20px;
+        border-radius: 25px;
+        text-align: center;
+        color: #050a30;
+    }
+
+    .message-content strong {
+        display: block;
+        font-size: 1.1rem;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Mobile */
+    @media (max-width: 500px) {
+        .input-container {
+            flex-direction: column;
+            background: transparent;
+            padding: 0;
+            gap: 10px;
+        }
+        .clean-input {
+            background: white;
+            border-radius: 100px;
+            width: 100%;
+            padding: 18px;
+            box-sizing: border-box;
+        }
+        .submit-pill {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    }
