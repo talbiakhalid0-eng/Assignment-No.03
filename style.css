@@ -179,45 +179,56 @@ body {
 }
 
 /* Horizontal Slider Logic */
+/* 1. The Container Fix */
 .testimonial-slider {
     display: flex;
     overflow-x: auto;
-    gap: 30px;
-    padding: 20px 50px;
-    scrollbar-width: none; /* Firefox */
+    gap: 30px; /* Space between the cards */
+    padding: 60px 50px; /* Space around the slider so cards don't touch screen edges */
+    background-color: #ffb83d; /* The signature yellow */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
 .testimonial-slider::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none; /* Hides scrollbar in Chrome/Safari */
 }
 
+/* 2. The Card Fix */
 .testimonial-card {
     background: white;
-    min-width: 400px;
-    flex: 0 0 auto;
-    padding: 40px;
-    border-radius: 50px;
-    height: 450px;
+    min-width: 450px; /* Keeps cards a consistent width */
+    height: 480px; /* Keeps cards a consistent height */
+    flex: 0 0 auto; /* Essential to prevent shrinking */
+    
+    /* Internal Spacing */
+    padding: 50px; 
+    border-radius: 60px; /* Deep rounded corners from image_5053ce.png */
+    
+    /* Layout inside the card */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    justify-content: space-between; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08); /* Soft shadow for a clean look */
+}
+
+/* 3. Text Alignment */
+.testimonial-card p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 20px;
+}
+
+.author {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: #050a30;
+    margin: 0;
 }
 
 .stars {
     color: #ffb83d;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.testimonial-card p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.author {
-    font-weight: 800;
-    margin-top: auto;
+    font-size: 1.3rem;
 }
 
 /* Bottom Logo Bar */
